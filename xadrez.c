@@ -42,6 +42,27 @@ printf("Nível Novato - Movimentação das Peças:\n");
         contadorRainha++;
     } while (contadorRainha <= casasRainha);
 
+    // -------------------------
+    // Nível Aventureiro - Movimento do Cavalo
+    // -------------------------
+    printf("\n\nNível Aventureiro - Movimento do Cavalo:\n");
+
+    // Constantes do movimento do Cavalo
+    const int casasBaixo = 2;
+    const int casasEsquerda = 1;
+
+    // Loop externo (for) → controla as casas para baixo
+    for (int i = 1; i <= casasBaixo; i++) {
+        printf("Casa %d: Baixo\n", i);
+
+        // Loop interno (while) → executa a movimentação para a esquerda
+        int j = 1;
+        while (j <= casasEsquerda && i == casasBaixo) {
+            // Só executa quando terminar os movimentos para baixo
+            printf("Casa %d: Esquerda\n", casasBaixo + j);
+            j++;
+        }
+    }
+
     return 0;
 }
-
